@@ -1,7 +1,7 @@
 [project]
-name = "check-domains"
+name = "collect-domains"
 version = "0.1.0"
-description = "Check domains with ease"
+description = "Collect domains with ease"
 readme = "README.md"
 authors = [
     { name = "Maxim (neiromaster) Gavrilenko", email = "parrysh@mail.ru" }
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-check-domains = "check_domains:main"
+collect-domains = "collect_domains:main"
 
 [build-system]
 requires = ["hatchling"]

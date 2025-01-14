@@ -1,4 +1,4 @@
-# check-domains
+# Collect-domains
 
 This script allows you to extract unique domains visited when browsing a given URL in a browser. It uses Playwright to open a browser, allows user interaction, and then saves the visited domains to a file.
 
@@ -26,13 +26,13 @@ To use the script, you need to have Python and Playwright installed.
 2.  **Run the script:**
 
     ```bash
-    python -m src.check_domains <URL>
+    python -m src.collect_domains <URL>
     ```
 
     Replace `<URL>` with the URL you want to open in the browser. For example:
 
     ```bash
-    python -m src.check_domains https://www.example.com
+    python -m src.collect_domains https://www.example.com
     ```
 
     You can also provide a URL without the scheme (e.g., `www.example.com`), and the script will automatically add `https://`.
