@@ -1,7 +1,7 @@
 [project]
 name = "check-domains"
 version = "0.1.0"
-description = "Add your description here"
+description = "Check domains with ease"
 readme = "README.md"
 authors = [
     { name = "Maxim (neiromaster) Gavrilenko", email = "parrysh@mail.ru" }
