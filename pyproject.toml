@@ -7,7 +7,9 @@ authors = [
     { name = "Maxim (neiromaster) Gavrilenko", email = "parrysh@mail.ru" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "playwright>=1.49.1",
+]
 
 [project.scripts]
 check-domains = "check_domains:main"
@@ -15,3 +17,8 @@ check-domains = "check_domains:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.1",
+]
