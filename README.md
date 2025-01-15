@@ -2,6 +2,8 @@
 
 This script allows you to extract unique domains visited when browsing a given URL in a browser. It uses Playwright to open a browser, allows user interaction, and then saves the visited domains to a file.
 
+- [Русская документация](docs/README_ru.md)
+
 ## Features
 
 -   Opens a URL in a browser.
@@ -56,22 +58,15 @@ uvx domain-collector https://www.wikipedia.org
 ```
 
 This will open the Wikipedia homepage in a browser. After you interact with the page and close the browser, the script will save the visited domains to a file named `wikipedia_org_domains.txt`.
-+
-+## Cleanup
-+
-+To remove all artifacts, you can use the following commands:
-+
-+```bash
-+uvx domain-collector https://www.wikipedia.org
-+```
-+
-+This will open the Wikipedia homepage in a browser. After you interact with the page and close the browser, the script will save the visited domains to a file named `wikipedia_org_domains.txt`.
-+
-+```bash
-+uvx playwright uninstall --all
-+uv cache clean # Use with caution, this will remove all uv cache
-+```
-+
+
+## Cleanup
+
+To remove all artifacts, you can use the following commands:
+
+```bash
+uvx playwright uninstall --all
+uv cache clean # Use with caution, this will remove all uv cache
+```
 
 ## Dependencies
 
