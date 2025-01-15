@@ -1,12 +1,12 @@
 [project]
 name = "domain-collector"
-version = "0.1.1"
+version = "0.1.2"
 description = "Collect domains with ease"
 readme = "README.md"
 authors = [
     { name = "Maxim (neiromaster) Gavrilenko", email = "parrysh@mail.ru" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = [
     "playwright>=1.49.1",
 ]
