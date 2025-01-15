@@ -19,7 +19,7 @@ def get_domains_from_browser(url: str) -> List[str]:
 
     with sync_playwright() as p:
         try:
-            browser = p.firefox.launch(headless=False)
+            browser = p.chromium.launch(headless=False)
             page = browser.new_page()
 
             def request_handler(request):

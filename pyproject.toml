@@ -1,5 +1,5 @@
 [project]
-name = "collect-domains"
+name = "domain-collector"
 version = "0.1.0"
 description = "Collect domains with ease"
 readme = "README.md"
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-collect-domains = "collect_domains:main"
+domain-collector = "domain_collector.main:main"
 
 [build-system]
 requires = ["hatchling"]

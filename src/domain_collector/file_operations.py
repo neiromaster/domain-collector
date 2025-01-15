@@ -1,6 +1,8 @@
 import os
 import re
 import logging
+from typing import List, Set
+from urllib.parse import ParseResult, urlparse
 
 
 def generate_filename(url: str) -> str:
