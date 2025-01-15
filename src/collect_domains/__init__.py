@@ -22,7 +22,7 @@ def get_domains_from_browser(url: str) -> List[str]:
 
     with sync_playwright() as p:
         try:
-            browser = p.chromium.launch(headless=False)
+            browser = p.firefox.launch(headless=False)
             page = browser.new_page()
 
             def request_handler(request):
@@ -87,3 +87,7 @@ def main() -> None:
     filename: str = generate_filename(target_url)
     save_domains_to_file(visited_domains, filename)
     print(f"Visited domains saved to: {filename}")
+
+
+if __name__ == "__main__":
+    main()
