@@ -2,8 +2,11 @@ import argparse
 from typing import List
 from urllib.parse import urlparse
 
-from domain_collector.browser import get_domains_from_browser
-from domain_collector.file_operations import generate_filename, save_domains_to_file
+from domain_collector.utils.browser import get_domains_from_browser
+from domain_collector.utils.file_operations import (
+    generate_filename,
+    save_domains_to_file,
+)
 
 
 def main() -> None:
