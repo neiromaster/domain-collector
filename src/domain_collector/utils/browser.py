@@ -37,12 +37,12 @@ def get_domains_from_browser(url: str) -> List[str]:
                 """
                 page.on("request", request_handler)
 
-            # Intercept requests on pages that already exist
+            # Intercept requests on already open pages
             for page in context.pages:
                 setup_request_interception(page)
 
             # Intercept requests on new pages
-            context.on("page", setup_request_interception)
+            context.on("page", lambda page: setup_request_interception(page))
 
             # Open the initial page
             page = context.new_page()
