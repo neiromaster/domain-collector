@@ -3,6 +3,7 @@ from urllib.parse import urlparse, ParseResult
 from typing import List, Set
 import logging
 
+
 def get_domains_from_browser(url: str) -> List[str]:
     """
     Opens a URL in a browser using Playwright, allows user interaction, and returns a list of domains visited.
@@ -37,16 +38,11 @@ def get_domains_from_browser(url: str) -> List[str]:
                 """
                 page.on("request", request_handler)
 
-            # Intercept requests on already open pages
-            for page in context.pages:
-                setup_request_interception(page)
-
             # Intercept requests on new pages
-            context.on("page", lambda page: setup_request_interception(page))
+            context.on("page", setup_request_interception)
 
             # Open the initial page
             page = context.new_page()
-            setup_request_interception(page)
             page.goto(url)
 
             logging.info(f"Opened URL: {url}")
