@@ -1,6 +1,6 @@
 [project]
 name = "domain-collector"
-version = "0.1.3"
+version = "0.1.4"
 description = "Collect domains with ease"
 readme = "README.md"
 authors = [
